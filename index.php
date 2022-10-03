@@ -11,7 +11,7 @@ if ($module == null) {
 require __DIR__ . '/modules/partials/header.php';
 
 # Include main contain
-require __DIR__ . '/modules/home.php';
+require __DIR__ . "/modules/$module.php";
 
 # Include footer
 require __DIR__ . '/modules/partials/footer.php';
