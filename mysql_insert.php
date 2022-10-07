@@ -31,11 +31,11 @@
       echo "<p>Failed to connect to MySQL: " . $connection->connect_error . '</p>';
     } else {
       // define sql query to insert data
-      $sql = "INSERT INTO users (username,password,fullname,email) VALUES ('$fullname', '$username', '$password', '$email')";
+      $sql = "INSERT INTO users (fullname,username,password,email) VALUES ('$fullname', '$username', '$password', '$email')";
       // use connection to execute the query
       if (!$connection->query($sql)) {
         // if insert failed, show error
-      echo "<p>Failed to insert data. Error: " . $connection->connect_error . '</p>';
+        echo "<p>Failed to insert data. Error: " . $connection->error . '</p>';
       } else {
         // if created successfully, show message and link to mysql_query.php to check the users list
         echo '<p>Created a new records successfully, access <a target="_blank" href="./mysql_query.php">Here</a> to check</p>';
