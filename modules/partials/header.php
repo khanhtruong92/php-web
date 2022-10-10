@@ -83,7 +83,11 @@ $fullname = $user ? $user['fullname'] : 'Guest';
 	<nav>
 		<ul>
 			<li><a href="./index.php">Home</a></li>
-			<li><a href="./index.php?m=register">Register</a></li>
-			<li><a href="./index.php?m=profile">My Profile</a></li>
+
+			<?php if (!$user) { ?>
+				<li><a href="./index.php?m=register">Register</a></li>
+			<?php } else { ?>
+				<li><a href="./index.php?m=profile">My Profile</a></li>
+			<?php } ?>
 		</ul>
 	</nav>
