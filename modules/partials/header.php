@@ -84,10 +84,12 @@ $fullname = $user ? $user['fullname'] : 'Guest';
 		<ul>
 			<li><a href="./index.php">Home</a></li>
 
+			<!-- Tuỳ chỉnh hiển thị main menu, homework 2 -->
 			<?php if (!$user) { ?>
 				<li><a href="./index.php?m=register">Register</a></li>
 			<?php } else { ?>
 				<li><a href="./index.php?m=profile">My Profile</a></li>
 			<?php } ?>
+			
 		</ul>
 	</nav>
