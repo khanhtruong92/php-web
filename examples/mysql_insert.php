@@ -31,7 +31,7 @@
       echo "<p>Failed to connect to MySQL: " . $connection->connect_error . '</p>';
     } else {
       // define sql query to insert data
-      $sql = "INSERT INTO users (username,password,fullname,email) VALUES ('$fullname', '$username', '$password', '$email')";
+      $sql = "INSERT INTO users (fullname,username,password,email) VALUES ('$fullname', '$username', '$password', '$email')";
       // use connection to execute the query
       if (!$connection->query($sql)) {
         // if insert failed, show error

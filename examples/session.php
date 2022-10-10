@@ -1,6 +1,6 @@
 <?php
 // Start the session at the top of page
-session_start();
+// session_start();
 ?>
 
 <!DOCTYPE html>
