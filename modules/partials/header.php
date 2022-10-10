@@ -4,7 +4,8 @@ $pageTitles = array(
 	'home' => 'Home',
 	'profile' => 'My Profile',
 	'register' => 'Register',
-	'login' => 'Login' // Thêm 1 dòng
+	'login' => 'Login', 
+	'logout' => 'Logout' // Thêm 1 dòng
 );
 // Get page title depend on what is using module
 $pageTitle = $pageTitles[$module];
@@ -57,7 +58,7 @@ $fullname = $user ? $user['fullname'] : 'Guest';
 				<?php if (!$user) { ?>
 					<li><a href="javascript:void(0)" onclick="showLoginForm()">Login</a></li>
 					<?php } else { ?>
-					<li><a href="javascript:void(0)">Logout</a></li>
+					<li><a href="./index.php?m=logout">Logout</a></li>
 				<?php } ?>
 			</ul>
 			
