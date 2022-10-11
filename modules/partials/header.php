@@ -5,7 +5,8 @@ $pageTitles = array(
 	'profile' => 'My Profile',
 	'register' => 'Register',
 	'login' => 'Login',
-	'logout' => 'Logout' // Thêm 1 dòng
+	'logout' => 'Logout',
+	'change_password' => 'Change Password'
 );
 // Get page title depend on what is using module
 $pageTitle = $pageTitles[$module];
@@ -89,6 +90,7 @@ $fullname = $user ? $user['fullname'] : 'Guest';
 				<li><a href="./index.php?m=register">Register</a></li>
 			<?php } else { ?>
 				<li><a href="./index.php?m=profile">My Profile</a></li>
+				<li><a href="./index.php?m=change_password">Change Password</a></li>
 			<?php } ?>
 			
 		</ul>
